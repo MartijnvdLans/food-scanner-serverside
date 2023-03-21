@@ -1,0 +1,21 @@
+<%- include('partials/head.ejs') -%>
+<body>
+    <header>
+    </header>
+    <main>
+        <%- include('partials/barcode.ejs') -%>
+        <section id="content">
+            <figure>
+                <img src="<%= productData.img %>" alt="<%= productData.name %>">
+             </figure>
+             <h2><%= productData.name %></h2>
+             <ul class="nutriments">
+                <% Object.values(productData.nutriments).forEach((nutri) => { %>
+                <li><span><%= Math.round(nutri.value * 10) / 1 %><%=nutri.unit%> <%=nutri.name%></li>
+                <% }) %>
+            </ul>
+            <%- include('partials/buttonAgain.ejs') -%>
+        </section>
+    </main>
+</body>
+</html>

@@ -13,14 +13,14 @@ export default function getProductData(barcode) {
         })
         .then((data) => {
             if (data.status) {
-                return ProductData(data)
+                return productData(data)
             } else {
                 return Promise.reject('no-info')
             }
         })
 }
 
-function ProductData(data) {
+function productData(data) {
     // Check middels spread en && operator of de voedingswaarde in de database aanwezig is, zo niet, zet deze niet in het object https://stackoverflow.com/questions/11704267/in-javascript-how-to-conditionally-add-a-member-to-an-object
 
     const productData = {

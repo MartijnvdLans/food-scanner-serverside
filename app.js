@@ -30,17 +30,13 @@ app.get('/scan', (req, res) => {
     res.render('scanning')
 })
 
-app.get('/scan#scanning', (req, res) => {
-    res.render('scanning')
-})
-
 app.get('/product/:barcode', (req, res) => {
     getProductData(req.params.barcode)
         .then((productData) => res.render('product', { productData }))
-        .catch((status) => res.render('error', { error: status }))
+        // .catch((status) => res.render('error', { error: status }))
 })
 
-// http://localhost:3000/#product/9002490100070
+// http://localhost:3000/product/9002490100070
 
 function server() {
     console.log('The server is running succesfully! at http://localhost:3000/');
