@@ -1,0 +1,150 @@
+*, html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'League Spartan', sans-serif;
+}
+
+html {
+	background-image: url(../img/fruitimg.jpg);
+	background-position: right;
+	background-size: cover;
+	min-height: 100vh;
+}
+
+main {
+	height: 100vh;
+	background: rgba(255, 255, 255, .9);
+}
+
+/* FONTS */
+
+/* font-family: 'League Spartan', sans-serif;
+font-family: 'Raleway', sans-serif; */
+
+section:nth-child(1) {
+	position: absolute;
+	height: 200px;
+	top: 0;
+}
+
+video {
+	width: 100vw;
+	height: 0px;
+	background-color: #666;
+    object-fit: cover;
+	border-bottom: 5px solid royalblue;
+	transition: 1s;
+}
+
+.videoOn {
+	height: 200px;
+}
+
+a {
+	background: royalblue;
+	color: #fff;
+	padding: 2em;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	font-size: 16px;
+	text-align: center;
+}
+
+section:nth-child(2) {
+	top: 200px;
+	position: fixed;
+	width: 100vw;
+	min-height: 500px;
+}
+
+section:nth-child(2) h2 {
+	max-width: 300px;
+	text-align: center;
+	margin: 1em auto .3em auto;
+	color: royalblue;
+}
+
+section:nth-child(2) h3 {
+	max-width: 300px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+section:nth-child(2) p {
+	margin: .5em auto;
+	text-align: center;
+}
+
+section:nth-child(2) ul {
+	list-style-type: none;
+	margin: 1em auto;
+	max-width: 300px;
+	text-align: justify;
+}
+
+section:nth-child(2) li {
+	width: 300px;
+	display: inline-block;
+	text-align-last: justify;
+	text-decoration: underline;
+	margin-top: .5em;
+}
+
+.display {
+	position: static;
+	display: block;
+	transform: translate(0);
+	margin: 2em auto;
+	width: 300px;
+}
+
+figure {
+	width: 8em;
+	height: 8em;
+	border-radius: 1em;
+	background: #fff;
+	margin: 1em auto 0 auto;
+	padding: .5em;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	margin: 0 auto;
+	display: flex;
+}
+
+/* LOADING STATE */
+
+.mockup {
+	color: transparent!important;
+	background: rgb(170,170,170);
+	background: linear-gradient(50deg, #ddd 0%, #aaa 40%, #aaa 60%, #ddd 100%);
+	background-position: center;
+	background-size: 400%;
+	animation: backgroundMove 10s linear infinite;
+}
+
+@keyframes backgroundMove {
+	0% {
+		background-position: 0%;
+	}
+	50% {
+		background-position: 100%;
+	}
+	100% {
+		background-position: 0%;
+	}
+	
+}
+
+/* ERROR STATE */
+
+.error {
+	background-color: transparent;
+	color: crimson!important;
+}
