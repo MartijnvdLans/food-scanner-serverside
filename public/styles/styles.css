@@ -34,11 +34,11 @@ video {
 	background-color: #666;
     object-fit: cover;
 	border-bottom: 5px solid royalblue;
-	transition: 1s;
+	transition: .5s;
 }
 
 .videoOn {
-	height: 200px;
+	animation: moveCamera 1s linear forwards;
 }
 
 a {
@@ -142,9 +142,24 @@ img {
 	
 }
 
+@keyframes moveCamera {
+	from {
+		height: 0px;
+	}
+	to {
+		height: 200px;
+	}
+	
+}
+
 /* ERROR STATE */
 
 .error {
 	background-color: transparent;
 	color: crimson!important;
+}
+
+.loading {
+	background-color: transparent;
+	color: royalblue;
 }

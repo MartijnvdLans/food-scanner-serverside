@@ -6,7 +6,7 @@ import { showData } from './render.js';
 
 export function handleRoutes() { 
     routie({
-        'scan': () => {
+        'scanning': () => {
             getCamera()
         },
         'product/:barcode': barcode => {

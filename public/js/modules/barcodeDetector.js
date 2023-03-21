@@ -26,7 +26,7 @@ function detectBarcode(video) {
         if (barcodes.length <= 0) {
             return 
         } else {
-            window.location.href = '#product/' + barcodes[0].rawValue;
+            window.location.href = '/product/' + barcodes[0].rawValue;
         }
     }, 1000)
 }

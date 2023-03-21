@@ -1,5 +1,6 @@
 import express from 'express';
 import ejs from 'ejs';
+import getProductData from './controllers/fetchData.js'
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -23,6 +24,20 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
     res.render('index')
+})
+
+app.get('/scan', (req, res) => {
+    res.render('scanning')
+})
+
+app.get('/scan#scanning', (req, res) => {
+    res.render('scanning')
+})
+
+app.get('/product/:barcode', (req, res) => {
+    getProductData(req.params.barcode)
+        .then((productData) => res.render('product', { productData }))
+        .catch((status) => res.render('error', { error: status }))
 })
 
 // http://localhost:3000/#product/9002490100070
