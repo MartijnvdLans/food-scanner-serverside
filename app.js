@@ -36,6 +36,10 @@ app.get('/product/:barcode', (req, res) => {
         // .catch((status) => res.render('error', { error: status }))
 })
 
+app.get('/offline', (req, res) => {
+    res.render('offline')
+})
+
 // http://localhost:3000/product/9002490100070
 
 function server() {
