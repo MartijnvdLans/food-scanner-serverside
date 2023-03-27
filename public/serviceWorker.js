@@ -4,10 +4,11 @@ const RUNTIME = 'runtime';
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
   '/',
-  '/offline', // Alias for index.html
-  'styles.styles.css',
-  'js/index.js',
-  'demo.js'
+  '/offline',
+  '/scan',
+  '/manifest.json',
+  '/styles/styles.css',
+  '/img/no-signal.png'
 ];
 
 
@@ -54,11 +55,11 @@ self.addEventListener('fetch', event => {
                 return response
               })
             })
-            .catch(() => {
-                // Show offline page if fetch failed
-                return caches.open(staticCache).then((cache) => cache.match('/offline'))
-            })
           })
+          .catch(() => {
+            // Show offline page if fetch failed
+            return caches.open(PRECACHE).then((cache) => cache.match('/offline'))
+        })
         })
       )
     }
