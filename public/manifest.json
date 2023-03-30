@@ -3,7 +3,7 @@
     "short_name": "iFoodi",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#ccc",
+    "background_color": "royalblue",
     "icons": [
         {
             "src": "/img/iF-mask-192.png",
