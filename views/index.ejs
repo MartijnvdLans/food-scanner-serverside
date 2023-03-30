@@ -4,14 +4,12 @@
     </header>
     <main>
         <%- include('partials/barcode.ejs') -%>
-        <button class="add-button">Add to home screen</button>
+        
         <section id="content">
             <%- include('partials/button.ejs') -%>
-            <!-- <form action="/productH/" method="POST">
-                <label for="ean-scanner">of zoek op EAN barcode</label>
-                <input type="text" id="ean-scanner" placeholder="Typ EAN hier">
-            </form> -->
+            <%- include('partials/form.ejs') -%>            
         </section>
+        <%- include('partials/app.ejs') -%>
     </main>
 </body>
 </html>

@@ -3,9 +3,11 @@ import ejs from 'ejs';
 import getProductData from './controllers/fetchData.js'
 import path from 'path';
 import { fileURLToPath } from 'url';
+import bodyParser from 'body-parser';
 
 const app = express();
-const port = 8000;
+const port = 5000;
+app.use(bodyParser.urlencoded({extended : true}))
 
 const __filename = fileURLToPath(import.meta.url);
 
@@ -19,7 +21,7 @@ app.set('views', 'views');
 
 // public folder location
 app.use(express.static(__dirname + '/public'));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 // Routing
 
 app.get('/', (req, res) => {
@@ -34,6 +36,11 @@ app.get('/product/:barcode', (req, res) => {
     getProductData(req.params.barcode)
         .then((productData) => res.render('product', { productData }))
         // .catch((status) => res.render('error', { error: status }))
+})
+
+app.get('/search', (req, res) => {
+    let barcode = req.query.barcode
+    res.redirect(`/product/${barcode}`)
 })
 
 app.get('/offline', (req, res) => {

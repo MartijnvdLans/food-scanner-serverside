@@ -8,7 +8,8 @@ const PRECACHE_URLS = [
   '/scan',
   '/manifest.json',
   '/styles/styles.css',
-  '/img/no-signal.png'
+  '/img/no-signal.png',
+  '/assets/Poppins-Regular.ttf'
 ];
 
 

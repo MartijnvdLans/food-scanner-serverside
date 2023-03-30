@@ -1,8 +1,13 @@
+@font-face {
+	font-family: Poppins;
+	src: url(../assets/Poppins-Regular.ttf);
+}
+
 *, html {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'League Spartan', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -15,6 +20,7 @@ html {
 main {
 	height: 100vh;
 	background: rgba(255, 255, 255, .9);
+	position: relative;
 }
 
 /* FONTS */
@@ -46,18 +52,20 @@ a {
 	color: #fff;
 	padding: 2em;
 	position: absolute;
-	top: 50%;
+	top: 20%;
 	left:50%;
 	transform: translate(-50%, -50%);
 	font-size: 16px;
 	text-align: center;
+	width: 400px;
+	max-width: 80%;
 }
 
 section:nth-child(2) {
 	top: 200px;
 	position: fixed;
 	width: 100vw;
-	min-height: 500px;
+	height: calc(100vh - 200px);
 }
 
 section:nth-child(2) h2 {
@@ -168,10 +176,61 @@ img {
 
 .add-button {
 	position: absolute;
-	top: 1px;
-	left: 1px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 2em;
+	outline: none;
+	background: royalblue;
+	color: #fff;
+	border: none;
+  }
+
+  .add-button:hover {
+	background-color: #6d8ce8;
   }
 
   .no-signal {
 	width: 70px;
+  }
+
+  /* FORM */
+
+  form {
+	position: absolute;
+	top: 34%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+	z-index: 1;
+	width: 80%;
+	max-width: 400px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+  }
+
+  form label {
+	width: 100%;
+	padding: 1em;
+	text-align: center;
+  }
+
+  input, button {
+	outline: none;
+	border: none;
+  }
+
+  form input {
+	width: 80%;
+	padding: 1em;
+	border: 1px solid royalblue;
+	border-right: none;
+  }
+
+  form button {
+	width: 20%;
+	padding: 1em;
+	color: #fff;
+	background-color: royalblue;
   }
