@@ -35,7 +35,7 @@ app.get('/scan', (req, res) => {
 app.get('/product/:barcode', (req, res) => {
     getProductData(req.params.barcode)
         .then((productData) => res.render('product', { productData }))
-        .catch((status) => res.render('index', { error: status }))
+        .catch((status) => res.render('error', { error: status }))
 })
 
 app.get('/search', (req, res) => {

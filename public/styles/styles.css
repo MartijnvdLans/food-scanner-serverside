@@ -69,7 +69,7 @@ section:nth-child(2) {
 }
 
 #content-index {
-	position: relative;
+	position: fixed;
 }
 
 #content-index div {
@@ -176,6 +176,10 @@ img {
 .error {
 	background-color: transparent;
 	color: crimson!important;
+}
+
+.error-text {
+	padding: 1em 1em 0 1em;
 }
 
 .loading {

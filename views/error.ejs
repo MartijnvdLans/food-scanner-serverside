@@ -1,0 +1,15 @@
+<%- include('partials/head.ejs') -%>
+<body>
+    <header>
+    </header>
+    <main>
+        <%- include('partials/barcode.ejs') -%>
+        
+        <section id="content">
+            <h2 class="error">NIET GEVONDEN</h2>
+            <p class="error-text">Het product dat u probeerd te scannen staat niet in onze database</p>
+            <%- include('partials/buttonAgain.ejs') -%>       
+        </section>
+    </main>
+</body>
+</html>
