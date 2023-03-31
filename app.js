@@ -35,7 +35,7 @@ app.get('/scan', (req, res) => {
 app.get('/product/:barcode', (req, res) => {
     getProductData(req.params.barcode)
         .then((productData) => res.render('product', { productData }))
-        // .catch((status) => res.render('error', { error: status }))
+        .catch((status) => res.render('index', { error: status }))
 })
 
 app.get('/search', (req, res) => {
@@ -47,7 +47,10 @@ app.get('/offline', (req, res) => {
     res.render('offline')
 })
 
-// http://localhost:3000/product/9002490100070
+// Barcodes om mee te testen
+
+// http://localhost:3000/product/9002490100070 => werkende
+// 9346976000639  => error
 
 function server() {
     console.log('The server is running succesfully! at http://localhost:3000/');
