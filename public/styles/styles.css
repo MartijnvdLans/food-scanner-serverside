@@ -1,6 +1,7 @@
 @font-face {
 	font-family: Poppins;
 	src: url(../assets/Poppins-Regular.ttf);
+	font-display: swap;
 }
 
 *, html {
@@ -11,7 +12,7 @@
 }
 
 html {
-	background-image: url(../img/fruitimg.jpg);
+	background-image: url(../img/fruitimg.webp);
 	background-position: right;
 	background-size: cover;
 	min-height: 100vh;
