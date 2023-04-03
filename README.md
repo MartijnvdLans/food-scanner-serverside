@@ -75,7 +75,7 @@ SEO: 91% -> Lighthouse blijft aangeven dat de pagina geen description bevat, ond
 
 ## Activity Diagram
 
-<img src="./Docs-Wiki/ActivityDiagram.png" WIDTH="100%">
+<img src="./Docs-Wiki/ActivityDiagram.jpg" WIDTH="100%">
 
 ## NPM Packages
 
