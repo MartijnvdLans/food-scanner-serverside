@@ -48,7 +48,17 @@ Om de webapplicatie te gebruiken op je de livedemo. Onder in beeld zal er een bu
 
 ## Performance
 
-TBA
+Ik heb de performance van de webapp verbeterd doormiddel van: 
+
+* Service worker en Manifest toe te voegen.
+* Pagina Caching.
+* Achtergrond foto kleiner te maken door het een webp te maken ipv een JPG.
+* Sommigen bestanden te compressen.
+* Font te downloaden in plaats van live laden met google fonts.
+
+<img src="./Docs-Wiki/performance.png" WIDTH="100%">
+
+SEO: 91% -> Lighthouse blijft aangeven dat de pagina geen description bevat, ondanks deze dat wel doet.
 
 ## Todo's
 
