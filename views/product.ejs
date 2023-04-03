@@ -9,6 +9,7 @@
                 <img src="<%= productData.img %>" alt="<%= productData.name %>">
              </figure>
              <h2><%= productData.name %></h2>
+             <p>Voedingswaarden per 100 gram</p>
              <ul class="nutriments">
                 <% Object.values(productData.nutriments).forEach((nutri) => { %>
                 <li><span><%= Math.round(nutri.value * 10) / 1 %><%=nutri.unit%> <%=nutri.name%></li>
