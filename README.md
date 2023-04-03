@@ -59,8 +59,8 @@ TBA
 | Make app work partially offline | ✅ |
 | offline page | ✅ |
 | Add search by EAN to prevent a non-working app when Javascript is off | ✅ |
-| Prevent detail page from saving in ServiceWorker |  |
-| Add rev-manifest | |
+| Prevent detail page from saving in ServiceWorker | - |
+| Add rev-manifest | - |
 
 
 ## Activity Diagram
@@ -73,6 +73,11 @@ TBA.
 * EJS
 * Node-fetch
 * Nodemon (dev)
+
+Downloaded but unused:
+
+* express-manifest 
+* manifest-rev
 
 ## API's
 
