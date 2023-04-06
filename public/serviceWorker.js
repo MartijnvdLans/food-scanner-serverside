@@ -9,7 +9,7 @@ const PRECACHE_URLS = [
   '/manifest.json',
   'img/fruitimg.webp',
   '/styles/min.styles.css',
-  '/js/min.index.js',
+  '/js/min-index.js',
   '/img/no-signal.png',
   '/assets/Poppins-Regular.ttf'
 ];
